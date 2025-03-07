@@ -9,6 +9,7 @@ import CuisinesList from "./CuisinesList/CuisinesList.vue";
 import SearchInput from "../../components/inputs/SearchInput/SearchInput.vue";
 import Loading from "../../components/loading/Loading.vue";
 import ActionButton from "@/components/buttons/ActionButton/ActionButton.vue";
+import axios from "axios";
 
 export default {
   name: "RestaurantsView",
@@ -38,15 +39,17 @@ export default {
       this.loading = true;
 
       try {
-        const res = await fetch(`/api/restaurants/bypostcode/${this.search}`);
-        const data = await res.json();
+        const res = await axios.get(
+          `/api/restaurants/bypostcode/${this.search}`,
+        );
+        const data = res.data;
         this.restaurants = data.Restaurants;
         this.filteredRestaurants = data.Restaurants;
         this.cuisines = data.CuisineSets[0].Cuisines.map(
           (cuisine) => cuisine.Name,
         ).sort();
       } catch (e) {
-        console.error("Error fetching data:", e);
+        console.error("Error fetching data:", e.message);
         this.restaurants = [];
       } finally {
         this.loading = false;
