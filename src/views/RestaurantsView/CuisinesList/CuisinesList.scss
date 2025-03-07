@@ -1,0 +1,32 @@
+.cuisines-list {
+  height: 600px;
+  overflow-y: auto;
+
+  li {
+    width: 98%;
+    margin-bottom: 8px;
+
+    button {
+      width: 100%;
+      text-align: left;
+      background-color: #fff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius);
+      transition: all 0.2s ease-out;
+
+      &.selected {
+        background-color: var(--primary-color);
+        color: #fff;
+
+        &:hover {
+          background-color: var(--primary-color);
+        }
+      }
+
+      &:hover {
+        background-color: #f3f3f3;
+        border-color: var(--primary-color);
+      }
+    }
+  }
+}

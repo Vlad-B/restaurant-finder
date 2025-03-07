@@ -1,0 +1,29 @@
+.cuisines-list {
+  height: 600px;
+  overflow-y: auto;
+}
+.cuisines-list li {
+  width: 98%;
+  margin-bottom: 8px;
+}
+.cuisines-list li button {
+  width: 100%;
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  transition: all 0.2s ease-out;
+}
+.cuisines-list li button.selected {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.cuisines-list li button.selected:hover {
+  background-color: var(--primary-color);
+}
+.cuisines-list li button:hover {
+  background-color: #f3f3f3;
+  border-color: var(--primary-color);
+}
+
+/*# sourceMappingURL=CuisinesList.css.map */

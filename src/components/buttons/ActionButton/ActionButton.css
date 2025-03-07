@@ -1,0 +1,13 @@
+.simple-button.contained {
+  background-color: var(--primary-color);
+  color: var(--on-primary-color);
+}
+.simple-button.text {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+.simple-button.text:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=ActionButton.css.map */

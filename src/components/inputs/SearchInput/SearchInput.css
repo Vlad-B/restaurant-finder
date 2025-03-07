@@ -1,0 +1,21 @@
+.fa-magnifying-glass {
+  font-size: 24px;
+}
+
+.search-input {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 12px 12px;
+  background-color: var(--on-background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+.search-input input {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+/*# sourceMappingURL=SearchInput.css.map */

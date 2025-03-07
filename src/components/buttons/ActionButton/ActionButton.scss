@@ -1,0 +1,13 @@
+.simple-button {
+  &.contained {
+    background-color: var(--primary-color);
+    color: var(--on-primary-color);
+  }
+  &.text {
+    background-color: transparent;
+    color: var(--primary-color);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
