@@ -45,7 +45,7 @@ export default {
         const data = res.data;
         this.restaurants = data.Restaurants;
         this.filteredRestaurants = data.Restaurants;
-        this.cuisines = data.CuisineSets[0].Cuisines.map(
+        this.cuisines = data.MetaData.CuisineDetails.map(
           (cuisine) => cuisine.Name,
         ).sort();
       } catch (e) {
